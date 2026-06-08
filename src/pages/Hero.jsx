@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import './Hero.css'
 
 export default function Hero() {
@@ -61,9 +61,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero__scroll-hint" onClick={() => handleScroll('#services')}>
-        <FontAwesomeIcon icon={faArrowDown} className="hero__scroll-icon" />
-      </div>
     </section>
   )
 }
