@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import './Hero.css'
 
 export default function Hero() {
@@ -17,7 +19,7 @@ export default function Hero() {
       <div className="container hero__content">
         <div className="hero__badge">
           <span className="hero__badge-dot" />
-          2026년 6월 개업 · IT 개발 전문 기업
+          2026년 6월 개업 &nbsp;·&nbsp; IT 개발 전문 기업
         </div>
 
         <h1 className="hero__title">
@@ -34,9 +36,7 @@ export default function Hero() {
         <div className="hero__actions">
           <button className="btn-primary" onClick={() => handleScroll('#contact')}>
             프로젝트 문의
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+            <FontAwesomeIcon icon={faArrowRight} />
           </button>
           <button className="btn-secondary" onClick={() => handleScroll('#portfolio')}>
             포트폴리오 보기
@@ -62,8 +62,7 @@ export default function Hero() {
       </div>
 
       <div className="hero__scroll-hint" onClick={() => handleScroll('#services')}>
-        <span>스크롤</span>
-        <div className="hero__scroll-line" />
+        <FontAwesomeIcon icon={faArrowDown} className="hero__scroll-icon" />
       </div>
     </section>
   )

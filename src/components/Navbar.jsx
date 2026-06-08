@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import './Navbar.css'
 
 const navLinks = [
@@ -53,13 +55,11 @@ export default function Navbar() {
         </nav>
 
         <button
-          className={`navbar__burger ${menuOpen ? 'navbar__burger--open' : ''}`}
+          className="navbar__burger"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="메뉴 열기"
         >
-          <span />
-          <span />
-          <span />
+          <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} />
         </button>
       </div>
     </header>

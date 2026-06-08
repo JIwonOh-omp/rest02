@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './Footer.css'
 
 export default function Footer() {
@@ -18,9 +21,17 @@ export default function Footer() {
           <a href="#contact">연락처</a>
         </div>
 
-        <div className="footer__copy">
-          <p>© {year} DevStudio. All rights reserved.</p>
-          <p className="footer__established">설립일 : 2026.06.08</p>
+        <div className="footer__right">
+          <div className="footer__socials">
+            <a href="https://github.com/JIwonOh-omp" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a href="mailto:hello@pieceofcakestudio.kr" aria-label="Email">
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+          </div>
+          <p className="footer__copy">© {year} Piece of Cake Studio</p>
+          <p className="footer__established">Est. 2026.06.08</p>
         </div>
       </div>
     </footer>

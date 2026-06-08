@@ -1,19 +1,25 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLightbulb, faHandshake, faShield, faComments } from '@fortawesome/free-solid-svg-icons'
 import './About.css'
 
 const values = [
   {
+    icon: faLightbulb,
     title: '기술 혁신',
     desc: '최신 기술 트렌드를 적극 도입하고 끊임없이 학습하여 최선의 솔루션을 제공합니다.',
   },
   {
+    icon: faHandshake,
     title: '고객 중심',
     desc: '고객의 비즈니스 목표를 이해하고, 그에 맞는 맞춤형 개발로 실질적인 가치를 창출합니다.',
   },
   {
+    icon: faShield,
     title: '책임과 신뢰',
     desc: '약속한 일정과 품질을 반드시 지키며, 프로젝트 완료 후에도 책임 있는 유지보수를 약속합니다.',
   },
   {
+    icon: faComments,
     title: '소통과 투명성',
     desc: '개발 과정을 투명하게 공유하고, 클라이언트와 긴밀한 소통을 통해 방향을 맞춥니다.',
   },
@@ -59,7 +65,9 @@ export default function About() {
             <div className="about__values">
               {values.map((v, i) => (
                 <div className="about__value-card" key={i}>
-                  <div className="about__value-num accent">0{i + 1}</div>
+                  <div className="about__value-icon">
+                    <FontAwesomeIcon icon={v.icon} />
+                  </div>
                   <div>
                     <h3 className="about__value-title">{v.title}</h3>
                     <p className="about__value-desc">{v.desc}</p>
